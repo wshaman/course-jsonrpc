@@ -15,5 +15,5 @@ func DoHello(params json.RawMessage) (interface{}, error) {
 	if err := json.Unmarshal(params, &p); err != nil {
 		return "", errors.New("wrong params sent, expected {name:string}")
 	}
-	return fmt.Sprintf("Hello, %s! Gald to see you", p.Name), nil
+	return fmt.Sprintf("Hello, %s! Glad to see you", p.Name), nil
 }
