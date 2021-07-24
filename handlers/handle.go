@@ -55,7 +55,9 @@ func parseRequest(r *http.Request) (*Request, error) {
 
 func handle(req Request) (interface{}, error) {
 	handlers := map[string]func(message json.RawMessage) (interface{}, error){
-		"doHello": methods.DoHello,
+		"doHello":    methods.DoHello,
+		"summ":       methods.Summ,
+		"summStatus": methods.SummStatus,
 	}
 	h, ok := handlers[req.Method]
 	if !ok {
