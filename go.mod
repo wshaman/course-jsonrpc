@@ -1,0 +1,1 @@
+module "github.com/wshaman/course-jsonrpc"
